@@ -23,35 +23,36 @@ const Profile = () => {
 
   const userId = parseInt(useLocation().pathname.split("/")[2]);
 
-  const { isLoading, error, data } = useQuery(["user"], () =>
-    makeRequest.get("/users/find/" + userId).then((res) => {
-      return res.data;
-    })
-  );
-
-  const { isLoading: rIsLoading, data: relationshipData } = useQuery(
-    ["relationship"],
-    () =>
+  const { isLoading, error, data } = useQuery({
+    queryKey: ["user"],
+    queryFn: () =>
+      makeRequest.get("/users/find/" + userId).then((res) => {
+        return res.data;
+      }),
+  });
+  
+  const { isLoading: rIsLoading, data: relationshipData } = useQuery({
+    queryKey: ["relationship"],
+    queryFn: () =>
       makeRequest.get("/relationships?followedUserId=" + userId).then((res) => {
         return res.data;
-      })
-  );
+      }),
+  });
 
   const queryClient = useQueryClient();
 
-  const mutation = useMutation(
-    (following) => {
-      if (following)
+  const mutation = useMutation({
+    mutationFn: (following) => {
+      if (following) {
         return makeRequest.delete("/relationships?userId=" + userId);
+      }
       return makeRequest.post("/relationships", { userId });
     },
-    {
-      onSuccess: () => {
-        // Invalidate and refetch
-        queryClient.invalidateQueries(["relationship"]);
-      },
-    }
-  );
+    onSuccess: () => {
+      // Invalidate and refetch
+      queryClient.invalidateQueries(["relationship"]);
+    },
+  });
 
   const handleFollow = () => {
     mutation.mutate(relationshipData.includes(currentUser.id));

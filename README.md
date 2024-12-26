@@ -17,7 +17,7 @@ A full-stack social media website built with React.js, Express.js, and SCSS. Thi
 - **Frontend**: React.js
 - **Backend**: Express.js
 - **Styling**: SCSS
-- **Database**: (Specify the database you're using, e.g., MongoDB, PostgreSQL, etc.)
+- **Database**: SQL (MySQLWorkbench)
 - **Authentication**: JWT (JSON Web Tokens)
 
 ## Installation

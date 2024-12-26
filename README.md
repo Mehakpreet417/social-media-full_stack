@@ -1,46 +1,36 @@
-Social Media Website
-Overview
-This is a full-stack social media platform built to enhance my backend development skills using Node.js and Express.js. The project allows users to connect, interact, and share their stories while offering a seamless user experience with a responsive frontend.
+# Social Media Website
 
-Features
-User Authentication: Secure login and registration functionality.
-Profile Management: Update and manage user profiles.
-Social Features:
-Follow and unfollow users.
-Create, edit, and delete posts.
-Like and comment on posts.
-Post and view stories.
-Responsive Design: Built with modern UI/UX principles for a smooth user experience.
-Tech Stack
-Frontend: React.js, SCSS
-Backend: Node.js, Express.js
-Database: SQL (managed using SQL Workbench)
-Version Control: Git, GitHub
-Installation and Setup
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/social-media-website.git  
-Navigate to the project directory:
-bash
-Copy code
-cd social-media-website  
-Install dependencies for both frontend and backend:
-bash
-Copy code
-npm install  
-Start the development server:
-bash
-Copy code
-npm run dev  
-Open your browser and navigate to http://localhost:3000.
-Folder Structure
-client: React.js components, SCSS styles, and assets.
-api: RESTful APIs using Express.js for user authentication, posts, and interactions.
-SQL scripts and configurations managed via SQL Workbench.
-Future Enhancements
-Add real-time chat functionality.
-Implement notifications for likes, comments, and follows.
-Optimize performance for larger datasets.
-Contribution
-Feel free to fork this repository and open a pull request for contributions or improvements.
+A full-stack social media website built with React.js, Express.js, and SCSS. This platform allows users to create accounts, follow others, write posts, like posts, comment on posts, and post stories. The app also includes a login and register page, along with functionality to update user profiles.
+
+## Features
+
+- **User Authentication**: Register, log in, and log out.
+- **Profile Management**: Users can update their profile details.
+- **Follow System**: Users can follow and unfollow other users.
+- **Post Creation**: Users can create, edit, and delete posts.
+- **Like Posts**: Users can like or unlike posts.
+- **Comments**: Users can comment on posts.
+- **Stories**: Users can post stories that disappear after 24 hours.
+
+## Technologies Used
+
+- **Frontend**: React.js
+- **Backend**: Express.js
+- **Styling**: SCSS
+- **Database**: (Specify the database you're using, e.g., MongoDB, PostgreSQL, etc.)
+- **Authentication**: JWT (JSON Web Tokens)
+
+## Installation
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js and npm
+- Git
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Mehakpreet417/social-media-full_stack.git
+cd social-media-full_stack
